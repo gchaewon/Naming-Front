@@ -24,8 +24,8 @@ import LoadingModal from "../../components/homePage/LoadingModal";
 const HomePage = () => {
   // redux
   const dispatch = useAppDispatch();
-  // 유저 아이디 가져오기 
-  const {userId} = useAppSelector((state)=>state.user);
+  // 유저 아이디 가져오기
+  const { userId } = useAppSelector((state) => state.user);
   // 사전 아이디 가져오기
   const { dictionaryId } = useAppSelector((state) => state.dictionary);
 
@@ -35,9 +35,9 @@ const HomePage = () => {
   }, []);
 
   const navigate = useNavigate();
-  
+
   // 버튼 클릭시 이동
-  function scrollto(e){
+  function scrollto(e) {
     e.target.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
@@ -57,39 +57,43 @@ const HomePage = () => {
         setColor(res.data.data.color);
         setShapeNum(res.data.data.shadow);
         setDecoNum(res.data.data.border);
-        dispatch(setCommentNum({commentNum: res.data.data.stacked})); // 쌓인 문장 수 저장
+        dispatch(setCommentNum({ commentNum: res.data.data.stacked })); // 쌓인 문장 수 저장
       })
       .catch((error) => {
         //alert("사전 커스텀 정보 가져오기 실패");
-        // navigate(-1); 
-      })
+        // navigate(-1);
+      });
   };
-  // 사전 링크 복사하기 
-  const copyLink  = async () => {
+  // 사전 링크 복사하기
+  const copyLink = async () => {
     try {
-      await navigator.clipboard.
-      // 도메인 수정 필요
-      writeText(`https://naming-likelion.vercel.app/${userId}/visitorLanding/${dictionaryId}`);
+      await navigator.clipboard
+        // 도메인 수정 필요
+        .writeText(
+          `https://naming.swygbro.com/${userId}/visitorLanding/${dictionaryId}`
+        );
       // writeText(`http://localhost:3000/${userId}/visitorLanding/${dictionaryId}`);
       setShow(true);
     } catch (e) {
       setShow(false);
-      alert('사전 링크 복사 실패. 버튼을 다시 눌러주세요!');
+      alert("사전 링크 복사 실패. 버튼을 다시 눌러주세요!");
     }
   };
   // 사전 정보를 다 받아왔는지 확인 하는 함수
-  const checkInfo = () =>{
+  const checkInfo = () => {
     var check = false;
-    shapeNum!=0 && name!=""&& color!="" && shapeColor!=0 ? check = true : check = false;
+    shapeNum != 0 && name != "" && color != "" && shapeColor != 0
+      ? (check = true)
+      : (check = false);
     return check;
-  }
+  };
   const [show, setShow] = useState(false);
   return (
     <>
       <Sidebar />
-      <Background/>
+      <Background />
       <Container>
-      {checkInfo()? null : <LoadingModal/>}
+        {checkInfo() ? null : <LoadingModal />}
         <HomeDictionary
           name={name}
           color={color}
@@ -97,30 +101,35 @@ const HomePage = () => {
           shapeColor={shapeColor}
           decoNum={decoNum}
         />
-        {!checkInfo()? null : 
-        (<><ButtonWrapper onClick={copyLink}>
-          <Button>
-            <object type="image/svg+xml" data={getLink} className="getLink" />
-            <SF_HambakSnow>
-            {show ? (
-              <div>내 사전 링크 복사 완료!</div>
-          ) : (
-              <div>내 사전 링크 복사하기</div>
-          )}
-          </SF_HambakSnow>
-          </Button>
-        </ButtonWrapper>
-        <AlertMSG>
-          {show ? (
-            <SF_HambakSnow>
-              사전 링크가 클립보드에 복사되었습니다.
-            </SF_HambakSnow>
-          ) : (
-            <SF_HambakSnow>
-             </SF_HambakSnow>
-          )}
-        </AlertMSG></>)
-        }
+        {!checkInfo() ? null : (
+          <>
+            <ButtonWrapper onClick={copyLink}>
+              <Button>
+                <object
+                  type="image/svg+xml"
+                  data={getLink}
+                  className="getLink"
+                />
+                <SF_HambakSnow>
+                  {show ? (
+                    <div>내 사전 링크 복사 완료!</div>
+                  ) : (
+                    <div>내 사전 링크 복사하기</div>
+                  )}
+                </SF_HambakSnow>
+              </Button>
+            </ButtonWrapper>
+            <AlertMSG>
+              {show ? (
+                <SF_HambakSnow>
+                  사전 링크가 클립보드에 복사되었습니다.
+                </SF_HambakSnow>
+              ) : (
+                <SF_HambakSnow></SF_HambakSnow>
+              )}
+            </AlertMSG>
+          </>
+        )}
         <FooterWrapper>
           <Footer />
         </FooterWrapper>
@@ -130,17 +139,17 @@ const HomePage = () => {
 };
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    position: absolute;
-    top: 0;
-    overflow: scroll;
-`
+  position: absolute;
+  top: 0;
+  overflow: scroll;
+`;
 
 const AlertMSG = styled.div`
   font-weight: 800;
@@ -175,8 +184,8 @@ const Button = styled.div`
 `;
 
 const FooterWrapper = styled.div`
-    position: absolute;
-    bottom: 0;
-    padding: 20px;
-`
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+`;
 export default HomePage;
