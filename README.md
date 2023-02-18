@@ -1,10 +1,11 @@
 ## 이름하여 이름하다
-<h3>다른 사람이 적어주는 나의 정의를 모아 사전을 만들어보세요!</h3>
+### 다른 사람이 적어주는 나의 정의를 모아 사전을 만들어보세요!
 ## 프로젝트 소개
-<>이름하여 이름하다는 자신에 대한 정의를 주변인들로부터 모아 나만의 사전을 만들 수 있는 서비스입니다.
+이름하여 이름하다는 자신에 대한 정의를 주변인들로부터 모아 나만의 사전을 만들 수 있는 서비스입니다.
 00하다에 사전 주인의 이름을 넣을 수 있고, 사전의 특성을 살려 자음별로 정의를 모아볼 수 있게 하였으며 
 처음 작성할 때엔 시작해야하는 자음을 랜덤으로 배정해 약간의 강제성이 섞인 재미를 더했습니다.
-</>
+
+### <a hrefp="https://naming.swygbro.com/">배포 사이트</a>
 <br>
 <hr>
 <br>
@@ -18,9 +19,21 @@
         <td  align="center"><a href= "https://github.com/yun5581">허윤</a></td>
     </tr>
     <tr width="100%">
-         <td  align="center"><img src = "https://ifh.cc/v-xS27DL" width="100px"/></td>
-        <td  align="center"><img src = "https://ifh.cc/v-rjVP2l" width="100px" /></td>
-        <td  align="center"><img src = "https://ifh.cc/v-1FKqMW" width="100px"/></td>
+         <td  align="center">
+             <a href='https://ifh.cc/v-xS27DL' target='_blank'>
+                 <img src='https://ifh.cc/g/xS27DL.webp' border='0'width="100px">
+                </a>
+         </td>
+        <td  align="center">
+            <a href='https://ifh.cc/v-rjVP2l' target='_blank'>
+                <img src='https://ifh.cc/g/rjVP2l.webp' border='0' width="100px">
+            </a>
+        </td>
+        <td  align="center">
+            <a href='https://ifh.cc/v-1FKqMW' target='_blank'>
+                           <img src='https://ifh.cc/g/1FKqMW.webp' border='0' width="100px">
+            </a>
+        </td>
     </tr>
     <tr width="100%">
       <td  align="felx-start">
