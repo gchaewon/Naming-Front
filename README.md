@@ -1,7 +1,10 @@
 ## 이름하여 이름하다
-
+<h2>다른 사람이 적어주는 나의 정의를 모아 사전을 만들어보세요!</h2>
 ### 프로젝트 소개
-
+<h3>이름하여 이름하다는 자신에 대한 정의를 주변인들로부터 모아 나만의 사전을 만들 수 있는 서비스입니다.
+00하다에 사전 주인의 이름을 넣을 수 있고, 사전의 특성을 살려 자음별로 정의를 모아볼 수 있게 하였으며 
+처음 작성할 때엔 시작해야하는 자음을 랜덤으로 배정해 약간의 강제성이 섞인 재미를 더했습니다.
+</h3>
 <br>
 <hr>
 <br>
@@ -10,33 +13,35 @@
 
 <table border="" cellspacing="0" cellpadding="0" width="100%">
     <tr width="100%">
-        <td align="center"><a href= "">김민주</a></td>
-        <td align="center"><a href= "">이채원</a></td>
-        <td  align="center"><a href= "">허윤</a></td>
+        <td align="center"><a href= "https://github.com/miinjoo">김민주</a></td>
+        <td align="center"><a href= "https://github.com/gchaewon">이채원</a></td>
+        <td  align="center"><a href= "https://github.com/yun5581">허윤</a></td>
     </tr>
     <tr width="100%">
-         <td  align="center"><img src = "" width="100px"/></td>
-        <td  align="center"><img src = "" width="100px" /></td>
-        <td  align="center"><img src = "" width="100px"/></td>
+         <td  align="center"><img src = "https://ifh.cc/v-xS27DL" width="100px"/></td>
+        <td  align="center"><img src = "https://ifh.cc/v-rjVP2l" width="100px" /></td>
+        <td  align="center"><img src = "https://ifh.cc/v-1FKqMW" width="100px"/></td>
     </tr>
     <tr width="100%">
       <td  align="felx-start">
         [가입자] 홈 화면 페이지 <br/> [가입자] 정의 구경하기 페이지 <br/> [가입자] 사전 검색 페이지 <br/> 햄버거 메뉴
         </td>
       <td  align="flex-start">
-        [가입자] 초기화면 페이지 <br/> [가입자] 로그인/회원가입 페이지 <br/> [가입자] 번호 부여 페이지 <br/> [가입자] 사전 커스텀 페이지
+        [가입자] 초기/로그인/회원가입 페이지 <br/> 유저인증 & 로그인유지 <br/> 페이지 라우팅 
+        <br/> 사전 커스텀 페이지  <br/> 사전 공유 기능 <br/> 만든이들 페이지
+        <br/> [방문자] 정의 추가 작성, 정의 둘러보기 
        </td>
-      <td  align="flex-start">[방문자] 초기화면 페이지 <br/> [방문자] 작성자 이름 입력 페이지 <br/> [방문자] 정의 작성 페이지 <br/> [방문자] 둘러보기 페이지
+      <td  align="flex-start">[방문자] 초기화면 페이지 <br/> [방문자] 작성자 이름 입력 페이지 <br/> [방문자] 정의 초기 작성 페이지
         </td>
    </tr>
 </table>
 
 ### 개발 기간
 
-- 퍼블리싱 : 
-- 기능 구현과 API 연결 : 
-- 알파 테스트 :
-- 사이트 공개 : 
+- 퍼블리싱 : 1/5 ~ 1/20
+- 기능 구현과 API 연결 : 1/20 ~ 2/1
+- 알파 테스트 : 2/1 ~ 2/8
+- 사이트 공개 : 2/13
 
 <br/>
 
