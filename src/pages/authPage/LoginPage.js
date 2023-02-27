@@ -50,14 +50,17 @@ const LoginPage = () =>{
                     // 사전 아이디 받기
                     axios.get(`https://kj273456.pythonanywhere.com/dictionary/id/${res.data.user_id}/`)
                     .then((res)=>{
-                        dispatch(setDictionaryID({dictionaryId: res.data.data.id}));
-                    }).then(()=>{  
-                        navigate("/home");
-                        window.location.reload();
-                    }).catch((error)=>{
-                        alert("사전 정보를 가져오지 못했습니다. 재로그인해주세요.");
-                        navigate("/login");
-                    }); 
+                        if(res.data.message=="사전id 찾기 성공"){
+                            dispatch(setDictionaryID({dictionaryId: res.data.data.id}));
+                            navigate("/home");
+                            window.location.reload();
+                        }
+                        // 사전 만들기 중단한 유저 예외처리
+                        else{
+                            alert("저장된 사전 정보가 없어요!\n 사전을 다시 만들어주세요.");
+                            navigate("/custom");
+                        }
+                    })
                 }
             })
         }
