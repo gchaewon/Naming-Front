@@ -57,6 +57,7 @@ const SearchPage = () => {
     }
   }, []);
 
+  var nth = 1;
   return (
     <>
       <Background/>
@@ -90,7 +91,8 @@ const SearchPage = () => {
                         <div className="searchResult">
                           <SF_HambakSnow>
                           {/* 사전 번호가 아닌 위에서부터 1번 */}
-                            {index+1}번째 {keyword}하다
+                            {/* {index+1}번째 {keyword}하다 */}
+                            {nth++}번째 {keyword}하다
                           </SF_HambakSnow>
                         </div>
                         <div className="resultCount">
